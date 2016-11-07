@@ -11,11 +11,14 @@ public class Client {
 
 	public static void main(String[] args) throws MalformedURLException, RemoteException, NotBoundException {
 		
+		String username = "Bob";
+		String password = "bobsSecretPassword";
+		
 		PrintService ps = (PrintService) Naming.lookup("rmi://localhost:5099/printing");
 
-		System.out.println("--- " + ps.echo("hey server"));
-		ps.print("something.docx", "101E");
-		ps.restart();
-		System.out.println(ps.queue());
+		System.out.println(ps.echo("hey server", username, password));
+		ps.print("something.docx", "101E", username, password);
+		ps.restart(username, password);
+		System.out.println(ps.queue(username, password));
 	}
 }
