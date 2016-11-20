@@ -17,8 +17,9 @@ public class HashFactory {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
 
-		String[] usernames = { "Bob", "Alice" };
-		String[] originalPasswords = { "bobsSecretPassword", "AlicesSecretPassword" };
+		String[] usernames = { "Alice", "Bob", "Cecilia", "David", "Erica", "Fred", "George" };
+		String[] originalPasswords = { "AlicesSecretPassword", "BobsSecretPassword", "CeciliasSecretPassword", "DavidsSecretPassword", "EricasSecretPassword", "FredsSecretPassword", "GeorgesSecretPassword" };
+		
 		List<String> lines = new ArrayList<String>();
 
 		for (int i = 0; i < originalPasswords.length; i++) {
